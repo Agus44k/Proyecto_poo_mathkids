@@ -8,14 +8,14 @@ package proyecto_poo_mathkids;
  *
  * @author Gabriel
  */
-public class Registro_Profesor extends javax.swing.JFrame {
+public class Principal extends javax.swing.JFrame {
     
-    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Registro_Profesor.class.getName());
+    private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(Principal.class.getName());
 
     /**
-     * Creates new form Registro_Profesor
+     * Creates new form Principal
      */
-    public Registro_Profesor() {
+    public Principal() {
         initComponents();
     }
 
@@ -28,17 +28,30 @@ public class Registro_Profesor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jCheckBox1 = new javax.swing.JCheckBox();
+        pnlContenedor = new javax.swing.JPanel();
+        panelLogin1 = new proyecto_poo_mathkids.PanelLogin();
+        panel_Registro1 = new proyecto_poo_mathkids.Panel_Registro();
+        panel_Login_Profesor1 = new proyecto_poo_mathkids.Panel_Login_Profesor();
+
+        jCheckBox1.setText("jCheckBox1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        pnlContenedor.setLayout(new java.awt.CardLayout());
+        pnlContenedor.add(panelLogin1, "card2");
+        pnlContenedor.add(panel_Registro1, "cardRegistro");
+        pnlContenedor.add(panel_Login_Profesor1, "cardProfesor");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(pnlContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(pnlContenedor, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -66,9 +79,14 @@ public class Registro_Profesor extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> new Registro_Profesor().setVisible(true));
+        java.awt.EventQueue.invokeLater(() -> new Principal().setVisible(true));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox jCheckBox1;
+    private proyecto_poo_mathkids.PanelLogin panelLogin1;
+    private proyecto_poo_mathkids.Panel_Login_Profesor panel_Login_Profesor1;
+    private proyecto_poo_mathkids.Panel_Registro panel_Registro1;
+    private javax.swing.JPanel pnlContenedor;
     // End of variables declaration//GEN-END:variables
 }
