@@ -74,4 +74,3 @@ Contacto
 --------
 Si tienes problemas para abrir el proyecto en NetBeans o con Git, comenta en GitHub Issues o contacta a Agus44k en GitHub.
 
-Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
