@@ -1,0 +1,16 @@
+ M proyecto_poo_mathkids/nbproject/project.properties
+ D proyecto_poo_mathkids/src/proyecto_poo_mathkids/Login.form
+ D proyecto_poo_mathkids/src/proyecto_poo_mathkids/Login.java
+ D proyecto_poo_mathkids/src/proyecto_poo_mathkids/Registro_Profesor.form
+ D proyecto_poo_mathkids/src/proyecto_poo_mathkids/Registro_Profesor.java
+?? COMMIT_REMOVE_MSG.txt
+?? __status.txt
+?? proyecto_poo_mathkids/nbproject/private/
+?? proyecto_poo_mathkids/src/proyecto_poo_mathkids/PanelLogin.form
+?? proyecto_poo_mathkids/src/proyecto_poo_mathkids/PanelLogin.java
+?? proyecto_poo_mathkids/src/proyecto_poo_mathkids/Panel_Login_Profesor.form
+?? proyecto_poo_mathkids/src/proyecto_poo_mathkids/Panel_Login_Profesor.java
+?? proyecto_poo_mathkids/src/proyecto_poo_mathkids/Panel_Registro.form
+?? proyecto_poo_mathkids/src/proyecto_poo_mathkids/Panel_Registro.java
+?? proyecto_poo_mathkids/src/proyecto_poo_mathkids/Principal.form
+?? proyecto_poo_mathkids/src/proyecto_poo_mathkids/Principal.java

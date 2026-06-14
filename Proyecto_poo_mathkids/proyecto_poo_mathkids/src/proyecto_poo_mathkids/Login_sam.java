@@ -1,0 +1,166 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt 
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java 
+ */
+package proyecto_poo_mathkids;
+
+
+public class Login_sam extends javax.swing.JPanel {
+
+    private DatabaseManager dbManager;
+
+    public Login_sam() {
+        dbManager = new DatabaseManager();
+        initComponents();
+    }
+
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    private void initComponents() {
+
+        jPanel1 = new javax.swing.JPanel();
+        jtxtUserLogin = new javax.swing.JTextField();
+        jtxtPassLogin = new javax.swing.JPasswordField();
+        jButton3 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jtxtUserLogin.addActionListener(this::jtxtUserLoginActionPerformed);
+        jPanel1.add(jtxtUserLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 260, 30));
+
+        jtxtPassLogin.addActionListener(this::jtxtPassLoginActionPerformed);
+        jPanel1.add(jtxtPassLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 260, 30));
+
+        jButton3.setFont(new java.awt.Font("Bodoni MT", 0, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(102, 153, 255));
+        jButton3.setText("VOLVER");
+        jButton3.addActionListener(this::jButton3ActionPerformed);
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, -1, -1));
+
+        jButton2.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(102, 153, 255));
+        jButton2.setText("EMPEZAR");
+        jButton2.addActionListener(this::jButton2ActionPerformed);
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Bodoni MT", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel4.setText("¿No tienes cuenta?");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 120, -1));
+
+        jLabel3.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel3.setText("CONTRASEÑA");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TITULOCHIQUITO.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 550, 150));
+
+        jButton1.setFont(new java.awt.Font("Bodoni MT", 0, 12)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(102, 153, 255));
+        jButton1.setText("REGISTRARTE");
+        jButton1.addActionListener(this::jButton1ActionPerformed);
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(102, 153, 255));
+        jLabel2.setText("USUARIO");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/login.jpg"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 440));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+    }// </editor-fold>//GEN-END:initComponents
+
+
+    public static String usuarioRegistrado = "";
+    public static String contrasenaRegistrada = "";
+    
+    
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+
+        String userLogin = jtxtUserLogin.getText().trim();
+        String passLogin = new String(jtxtPassLogin.getPassword());
+
+        if (userLogin.isEmpty() || passLogin.isEmpty()) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Ingresa usuario y contraseña", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            return;
+        }
+
+        if (dbManager.authenticateStudent(userLogin, userLogin)) {
+            PRINCIPAL.usuarioRegistrado = userLogin;
+            javax.swing.JOptionPane.showMessageDialog(this, "¡Bienvenido a MathKids!");
+    
+            java.awt.Container parent = this.getParent();    
+            if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {       
+                java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();        
+                layout.show(parent, "cardMenuestudiante"); 
+            }
+        } else {
+            javax.swing.JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jtxtUserLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtUserLoginActionPerformed
+        jtxtUserLogin.setText("");
+        jtxtPassLogin.setText("********");
+    }//GEN-LAST:event_jtxtUserLoginActionPerformed
+
+    private void jtxtPassLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtxtPassLoginActionPerformed
+        jtxtUserLogin.setText("Ingrese su Usuario");
+        jtxtPassLogin.setText("");
+    }//GEN-LAST:event_jtxtPassLoginActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        java.awt.Container parent = this.getParent();
+
+        if (parent != null && parent.getLayout() instanceof java.awt.CardLayout)
+        {
+            java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();
+                layout.show(parent, "cardInicio");
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        java.awt.Container parent = this.getParent();
+
+        if (parent != null && parent.getLayout() instanceof java.awt.CardLayout)
+        {
+            java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();
+                layout.show(parent, "cardRegistro");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+
+    // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPasswordField jtxtPassLogin;
+    private javax.swing.JTextField jtxtUserLogin;
+    // End of variables declaration//GEN-END:variables
+}
