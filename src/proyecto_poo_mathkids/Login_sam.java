@@ -7,10 +7,7 @@ package proyecto_poo_mathkids;
 
 public class Login_sam extends javax.swing.JPanel {
 
-    private DatabaseManager dbManager;
-
     public Login_sam() {
-        dbManager = new DatabaseManager();
         initComponents();
     }
 
@@ -97,7 +94,7 @@ public class Login_sam extends javax.swing.JPanel {
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-        String userLogin = jtxtUserLogin.getText().trim();
+    String userLogin = jtxtUserLogin.getText().trim();
         String passLogin = new String(jtxtPassLogin.getPassword());
 
         if (userLogin.isEmpty() || passLogin.isEmpty()) {
@@ -105,17 +102,43 @@ public class Login_sam extends javax.swing.JPanel {
             return;
         }
 
-        if (dbManager.authenticateStudent(userLogin, userLogin)) {
-            PRINCIPAL.usuarioRegistrado = userLogin;
-            javax.swing.JOptionPane.showMessageDialog(this, "¡Bienvenido a MathKids!");
-    
-            java.awt.Container parent = this.getParent();    
-            if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {       
-                java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();        
-                layout.show(parent, "cardMenuestudiante"); 
+        String sql = "SELECT id, nombre_completo FROM usuarios WHERE usuario = ? AND contrasena = ?";
+
+        try (java.sql.Connection conn = ConexionBD.conectar();
+             java.sql.PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setString(1, userLogin);
+            pstmt.setString(2, passLogin);
+
+            java.sql.ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+
+                String nombre = rs.getString("nombre_completo");
+                
+
+                PRINCIPAL.usuarioRegistrado = userLogin; 
+
+                javax.swing.JOptionPane.showMessageDialog(this, "¡Bienvenido a MathKids, " + nombre + "!");
+        
+
+                jtxtUserLogin.setText("");
+                jtxtPassLogin.setText("");
+
+
+                java.awt.Container parent = this.getParent();  
+                if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {       
+                    java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();        
+                    layout.show(parent, "cardMenuestudiante"); 
+                }
+                
+            } else {
+
+                javax.swing.JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
             }
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+
+        } catch (java.sql.SQLException e) {
+            javax.swing.JOptionPane.showMessageDialog(this, "Error de base de datos: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 

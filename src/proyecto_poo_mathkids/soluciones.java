@@ -7,10 +7,7 @@ package proyecto_poo_mathkids;
 
 public class soluciones extends javax.swing.JPanel {
 
-    private DatabaseManager dbManager;
-
     public soluciones() {
-        dbManager = new DatabaseManager();
         initComponents();
     }
     
@@ -150,9 +147,6 @@ public class soluciones extends javax.swing.JPanel {
             gestor.preguntaActual++;
             
             if (gestor.preguntaActual > gestor.MAX_PREGUNTAS) {
-                if (PRINCIPAL.studentId > 0) {
-                    dbManager.saveScore(PRINCIPAL.studentId, gestor.aciertos, gestor.dificultadActual);
-                }
                 javax.swing.JOptionPane.showMessageDialog(this, 
                     "Juego terminado\nAciertos: " + gestor.aciertos + "/" + gestor.MAX_PREGUNTAS);
                 gestor.preguntaActual = 1;

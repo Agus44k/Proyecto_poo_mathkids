@@ -79,21 +79,8 @@ public class Menu_Estudiantes extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        DatabaseManager db = new DatabaseManager();
-        java.util.List<DatabaseManager.ScoreRecord> topScores = db.getTopScores(10);
-        
         StringBuilder msg = new StringBuilder("=== TOP PUNTAJES ===\n\n");
-        if (topScores.isEmpty()) {
-            msg.append("No hay puntajes aun");
-        } else {
-            int pos = 1;
-            for (DatabaseManager.ScoreRecord r : topScores) {
-                msg.append(pos).append(". ").append(r.getStudentName())
-                   .append(" - ").append(r.getScore()).append(" aciertos")
-                   .append(" (Dificultad ").append(r.getDifficulty()).append(")\n");
-                pos++;
-            }
-        }
+        msg.append("No hay puntajes aun");
         
         javax.swing.JOptionPane.showMessageDialog(this, msg.toString(), "Logros", javax.swing.JOptionPane.INFORMATION_MESSAGE);
     }//GEN-LAST:event_jButton1ActionPerformed

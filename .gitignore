@@ -1,15 +1,12 @@
-# Ignore local SQLite DB
-# Local DBs
-mathkids.db
-proyecto_poo_mathkids/mathkids.db
-
 # Build artifacts
 /build/
 /dist/
 *.class
-*.jar
 *.war
 *.ear
+
+# Allow lib JARs
+!lib/*.jar
 
 # NetBeans
 nbproject/private/

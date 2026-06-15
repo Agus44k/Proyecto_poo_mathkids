@@ -7,16 +7,12 @@ package proyecto_poo_mathkids;
 
 
 public class RegistroSam extends javax.swing.JPanel {
-
-    private DatabaseManager dbManager;
    
     public RegistroSam() {
-        dbManager = new DatabaseManager();
         initComponents();
     }
     
 
-    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -111,33 +107,54 @@ public class RegistroSam extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 
+ 
         String usuario = jtxtUsuarioRegistro.getText().trim();
         String nombre = jTextField2.getText().trim();
         String contra = new String(jtxtContra.getPassword());
+        String rol = (String) jComboBox1.getSelectedItem();
         
+  
         if (usuario.isEmpty() || nombre.isEmpty() || contra.isEmpty()) {
             javax.swing.JOptionPane.showMessageDialog(this, "Llena todos los campos", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
             return;
         }
         
-        int id = dbManager.registerStudent(usuario, usuario);
-        
-        if (id > 0) {
-            PRINCIPAL.usuarioRegistrado = usuario;
-            PRINCIPAL.contrasenaRegistrada = contra;
-            PRINCIPAL.studentId = id;
-            
+
+        String sql = "INSERT INTO usuarios (usuario, nombre_completo, contrasena, rol) VALUES (?, ?, ?, ?)";
+
+        try (java.sql.Connection conn = ConexionBD.conectar();
+             java.sql.PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            // Asignar valores
+            pstmt.setString(1, usuario);
+            pstmt.setString(2, nombre);
+            pstmt.setString(3, contra);
+            pstmt.setString(4, rol);
+
+            pstmt.executeUpdate(); // Guarda en la base de datos
+
             javax.swing.JOptionPane.showMessageDialog(this, "¡Registro Exitoso! Ahora inicia sesión.");
-        } else {
-            javax.swing.JOptionPane.showMessageDialog(this, "Error al registrar, intenta con otro usuario", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-        
-        java.awt.Container parent = this.getParent();
-        
-        if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {   
-            java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();
-            layout.show(parent, "cardLogin");
+            
+
+            jtxtUsuarioRegistro.setText("");
+            jTextField2.setText("");
+            jtxtContra.setText("");
+            jComboBox1.setSelectedIndex(0);
+
+
+            java.awt.Container parent = this.getParent();
+            if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {   
+                java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();
+                layout.show(parent, "cardLogin");
+            }
+
+        } catch (java.sql.SQLException e) {
+
+            if (e.getMessage() != null && e.getMessage().contains("UNIQUE constraint failed")) {
+                javax.swing.JOptionPane.showMessageDialog(this, "Ese usuario ya existe. ¡Intenta con otro!", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            } else {
+                javax.swing.JOptionPane.showMessageDialog(this, "Error al registrar: " + e.getMessage(), "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

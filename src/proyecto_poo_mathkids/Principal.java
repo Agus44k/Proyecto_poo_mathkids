@@ -17,6 +17,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
 
     public PRINCIPAL() {
         initComponents();
+        ConexionBD.conectar();
     }
 
 
