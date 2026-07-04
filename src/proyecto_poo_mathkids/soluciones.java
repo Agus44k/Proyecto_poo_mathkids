@@ -26,11 +26,10 @@ public class soluciones extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jtxtRespuesta = new javax.swing.JTextField();
         jlblPregunta = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jbtnRevisar = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jlblMensaje = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -43,10 +42,6 @@ public class soluciones extends javax.swing.JPanel {
         jlblPregunta.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlblPregunta.setText("\" \"");
         jlblPregunta.setToolTipText("");
-
-        jLabel2.setFont(new java.awt.Font("Bodoni MT", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel2.setText("¿CUÁL ES EL RESULTADO?");
 
         jbtnRevisar.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         jbtnRevisar.setForeground(new java.awt.Color(102, 153, 255));
@@ -63,7 +58,7 @@ public class soluciones extends javax.swing.JPanel {
         jlblMensaje.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jlblMensaje.setText("Mensaje");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IMAGEN2.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/resultado.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -72,59 +67,46 @@ public class soluciones extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jlblPregunta, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 151, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel2)
-                                .addGap(138, 138, 138))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jtxtRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jlblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(257, 257, 257))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jbtnRevisar)
-                                .addGap(298, 298, 298))))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jlblPregunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addGap(38, 38, 38)
+                        .addComponent(jButton7))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(581, 581, 581)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jlblMensaje, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jtxtRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 236, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(627, 627, 627)
+                        .addComponent(jbtnRevisar)))
+                .addContainerGap(583, Short.MAX_VALUE))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(30, 30, 30)
-                            .addComponent(jButton7))
-                        .addComponent(jLabel1))
+                    .addComponent(jLabel5)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(61, 61, 61)
-                .addComponent(jLabel2)
-                .addGap(38, 38, 38)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 319, Short.MAX_VALUE)
                 .addComponent(jlblPregunta, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
+                .addGap(38, 38, 38)
                 .addComponent(jtxtRespuesta, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jlblMensaje)
-                .addGap(51, 51, 51)
+                .addGap(53, 53, 53)
                 .addComponent(jbtnRevisar)
-                .addContainerGap(123, Short.MAX_VALUE))
+                .addGap(156, 156, 156)
+                .addComponent(jButton7)
+                .addGap(29, 29, 29))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(440, 440, 440)
-                            .addComponent(jButton7))
-                        .addComponent(jLabel1))
+                    .addComponent(jLabel5)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -179,8 +161,7 @@ public class soluciones extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbtnRevisar;
     private javax.swing.JLabel jlblMensaje;
