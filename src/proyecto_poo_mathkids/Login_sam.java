@@ -23,18 +23,17 @@ public class Login_sam extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jtxtUserLogin.addActionListener(this::jtxtUserLoginActionPerformed);
-        jPanel1.add(jtxtUserLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 180, 260, 30));
+        jPanel1.add(jtxtUserLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 380, 260, 30));
 
         jtxtPassLogin.addActionListener(this::jtxtPassLoginActionPerformed);
-        jPanel1.add(jtxtPassLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 230, 260, 30));
+        jPanel1.add(jtxtPassLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, 260, 30));
 
         jButton3.setFont(new java.awt.Font("Bodoni MT", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(102, 153, 255));
@@ -46,34 +45,31 @@ public class Login_sam extends javax.swing.JPanel {
         jButton2.setForeground(new java.awt.Color(102, 153, 255));
         jButton2.setText("EMPEZAR");
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 290, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 530, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Bodoni MT", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(102, 153, 255));
         jLabel4.setText("¿No tienes cuenta?");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 120, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 580, 120, -1));
 
-        jLabel3.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel3.setText("CONTRASEÑA");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 230, -1, -1));
+        jLabel3.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel3.setText("USUARIO");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 380, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TITULOCHIQUITO.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 40, 550, 150));
+        jLabel5.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel5.setText("CONTRASEÑA");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 430, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Bodoni MT", 0, 12)); // NOI18N
         jButton1.setForeground(new java.awt.Color(102, 153, 255));
         jButton1.setText("REGISTRARTE");
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 370, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 610, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel2.setText("USUARIO");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 180, -1, -1));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/login.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 440));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/login.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -94,7 +90,7 @@ public class Login_sam extends javax.swing.JPanel {
     
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
 
-    String userLogin = jtxtUserLogin.getText().trim();
+        String userLogin = jtxtUserLogin.getText().trim();
         String passLogin = new String(jtxtPassLogin.getPassword());
 
         if (userLogin.isEmpty() || passLogin.isEmpty()) {
@@ -178,10 +174,9 @@ public class Login_sam extends javax.swing.JPanel {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPasswordField jtxtPassLogin;
     private javax.swing.JTextField jtxtUserLogin;

@@ -38,23 +38,22 @@ public class Menu_Estudiantes extends javax.swing.JPanel {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logro.png"))); // NOI18N
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
-        jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, 130, 220));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 300, 130, 220));
 
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/juego.png"))); // NOI18N
         jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 130, 220));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 300, 130, 220));
 
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/retodeldia.png"))); // NOI18N
         jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
         jButton5.addActionListener(this::jButton5ActionPerformed);
-        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 160, 130, 220));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 300, 130, 220));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IMAGEN2.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, 760, 450));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/que quieres hacer.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

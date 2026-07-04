@@ -18,76 +18,61 @@ public class RegistroSam extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jtxtUsuarioRegistro = new javax.swing.JTextField();
         jtxtContra = new javax.swing.JPasswordField();
         jTextField2 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel3.setText("USUARIO");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, -1, -1));
+        jLabel9.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel9.setText("USUARIO");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 260, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel4.setText("CONTRASEÑA");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 260, -1, -1));
+        jLabel11.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel11.setText("CONTRASEÑA");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 340, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel5.setText("ROL");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 300, -1, -1));
-
-        jLabel6.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(102, 153, 255));
-        jLabel6.setText("NOMBRE COMPLETO");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, -1, -1));
+        jLabel10.setFont(new java.awt.Font("Georgia", 0, 24)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel10.setText("NOMBRE COMPLETO");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 300, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(102, 153, 255));
         jButton1.setText("GUARDAR");
         jButton1.addActionListener(this::jButton1ActionPerformed);
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 370, 130, 30));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 440, 130, 30));
 
         jButton2.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(102, 153, 255));
         jButton2.setText("VOLVER");
         jButton2.addActionListener(this::jButton2ActionPerformed);
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 110, 30));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 440, 110, 30));
 
         jtxtUsuarioRegistro.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jPanel1.add(jtxtUsuarioRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 170, 260, 30));
-        jPanel1.add(jtxtContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 252, 260, 30));
+        jPanel1.add(jtxtUsuarioRegistro, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 260, 260, 30));
+        jPanel1.add(jtxtContra, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 340, 260, 30));
 
         jTextField2.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 210, 260, 30));
+        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 300, 260, 30));
 
-        jComboBox1.setFont(new java.awt.Font("Cambria", 0, 14)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ESTUDIANTE", "DOCENTE" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 130, -1));
-
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/registroletra.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 590, 220));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IMAGEN1.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 450));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/registro.png"))); // NOI18N
+        jLabel8.setToolTipText("");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1370, 720));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -111,8 +96,7 @@ public class RegistroSam extends javax.swing.JPanel {
         String usuario = jtxtUsuarioRegistro.getText().trim();
         String nombre = jTextField2.getText().trim();
         String contra = new String(jtxtContra.getPassword());
-        String rol = (String) jComboBox1.getSelectedItem();
-        
+
   
         if (usuario.isEmpty() || nombre.isEmpty() || contra.isEmpty()) {
             javax.swing.JOptionPane.showMessageDialog(this, "Llena todos los campos", "Error", javax.swing.JOptionPane.ERROR_MESSAGE);
@@ -129,7 +113,6 @@ public class RegistroSam extends javax.swing.JPanel {
             pstmt.setString(1, usuario);
             pstmt.setString(2, nombre);
             pstmt.setString(3, contra);
-            pstmt.setString(4, rol);
 
             pstmt.executeUpdate(); // Guarda en la base de datos
 
@@ -139,7 +122,7 @@ public class RegistroSam extends javax.swing.JPanel {
             jtxtUsuarioRegistro.setText("");
             jTextField2.setText("");
             jtxtContra.setText("");
-            jComboBox1.setSelectedIndex(0);
+
 
 
             java.awt.Container parent = this.getParent();
@@ -162,13 +145,10 @@ public class RegistroSam extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JPasswordField jtxtContra;

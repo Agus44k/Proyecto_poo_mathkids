@@ -30,31 +30,25 @@ public class Inicio_sam extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        titulo_inicio1 = new javax.swing.JLabel();
         jbtnIniciar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        titulo_inicio1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/TITULOCHIQUITO.png"))); // NOI18N
-        jPanel1.add(titulo_inicio1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, 510, 200));
 
         jbtnIniciar.setFont(new java.awt.Font("Bodoni MT", 0, 36)); // NOI18N
         jbtnIniciar.setForeground(new java.awt.Color(102, 153, 255));
         jbtnIniciar.setText("INICIAR");
         jbtnIniciar.addActionListener(this::jbtnIniciarActionPerformed);
-        jPanel1.add(jbtnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, -1, -1));
+        jPanel1.add(jbtnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 620, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/login.jpg"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, -1));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/inicio.png"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 770));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 2, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -74,9 +68,8 @@ public class Inicio_sam extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JButton jbtnIniciar;
-    public javax.swing.JLabel titulo_inicio1;
     // End of variables declaration//GEN-END:variables
 }

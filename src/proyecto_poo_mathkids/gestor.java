@@ -16,6 +16,6 @@ public class gestor {
     
     public static int preguntaActual = 1;
     public static final int MAX_PREGUNTAS = 5; 
-    public static int aciertos = 0; 
+    public static int aciertos = 0;     
     
 }

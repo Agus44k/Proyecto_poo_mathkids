@@ -27,7 +27,7 @@ public class Complejidad extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -40,22 +40,22 @@ public class Complejidad extends javax.swing.JPanel {
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/facil.png"))); // NOI18N
         jButton5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
         jButton5.addActionListener(this::jButton5ActionPerformed);
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 160, 130, 170));
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 360, 180, 290));
 
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/normal.png"))); // NOI18N
         jButton6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
         jButton6.addActionListener(this::jButton6ActionPerformed);
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 130, 170));
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 360, 180, 290));
 
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dificil.png"))); // NOI18N
         jButton7.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
         jButton7.addActionListener(this::jButton7ActionPerformed);
-        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, 130, 170));
+        jPanel2.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 360, 180, 290));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/IMAGEN2.png"))); // NOI18N
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-180, -30, 780, 530));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/elegir.png"))); // NOI18N
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-20, 0, -1, -1));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
@@ -80,7 +80,8 @@ public class Complejidad extends javax.swing.JPanel {
         java.awt.Container parent = this.getParent();
         if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {   
             java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();       
-            layout.show(parent, "cardJuego");     
+            layout.show(parent, "cardJuego");
+            
             for (java.awt.Component comp : parent.getComponents()) {      
                 if (comp instanceof soluciones) {            
                     ((soluciones) comp).cargarNuevaPregunta();            
@@ -98,7 +99,9 @@ public class Complejidad extends javax.swing.JPanel {
         java.awt.Container parent = this.getParent();
         if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {   
             java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();       
-            layout.show(parent, "cardJuego");     
+            layout.show(parent, "cardJuego");
+            
+            
             for (java.awt.Component comp : parent.getComponents()) {      
                 if (comp instanceof soluciones) {            
                     ((soluciones) comp).cargarNuevaPregunta();            
@@ -131,8 +134,8 @@ public class Complejidad extends javax.swing.JPanel {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
