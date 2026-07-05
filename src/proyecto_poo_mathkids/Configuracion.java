@@ -86,7 +86,12 @@ public class Configuracion extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+
+                java.awt.Container parent = this.getParent();  
+                if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {       
+                    java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();        
+                    layout.show(parent, "cardTutorial"); 
+                }
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed

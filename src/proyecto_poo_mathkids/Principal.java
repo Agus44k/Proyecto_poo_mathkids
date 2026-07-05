@@ -35,6 +35,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
         soluciones1 = new proyecto_poo_mathkids.soluciones();
         configuracion1 = new proyecto_poo_mathkids.Configuracion();
         creditos1 = new proyecto_poo_mathkids.Creditos();
+        tutorial1 = new proyecto_poo_mathkids.Tutorial();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -47,6 +48,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
         getContentPane().add(soluciones1, "cardJuego");
         getContentPane().add(configuracion1, "CardConfiguracion");
         getContentPane().add(creditos1, "CardCredito");
+        getContentPane().add(tutorial1, "cardTutorial");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -84,5 +86,6 @@ public class PRINCIPAL extends javax.swing.JFrame {
     private proyecto_poo_mathkids.Menu_Estudiantes menu_Estudiantes;
     private proyecto_poo_mathkids.RegistroSam registroSam;
     private proyecto_poo_mathkids.soluciones soluciones1;
+    private proyecto_poo_mathkids.Tutorial tutorial1;
     // End of variables declaration//GEN-END:variables
 }

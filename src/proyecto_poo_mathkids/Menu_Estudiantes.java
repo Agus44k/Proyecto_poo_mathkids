@@ -34,6 +34,7 @@ public class Menu_Estudiantes extends javax.swing.JPanel {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logro.png"))); // NOI18N
         jButton1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
+        jButton1.addActionListener(this::jButton1ActionPerformed);
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 300, 140, 220));
 
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
