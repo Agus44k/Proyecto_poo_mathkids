@@ -56,7 +56,12 @@ public class Creditos extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnIniciar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar2ActionPerformed
-        // TODO add your handling code here:
+        
+        java.awt.Container parent = this.getParent();              
+        if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {                           
+        java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();                            
+        layout.show(parent, "CardConfiguracion");    
+        }
     }//GEN-LAST:event_btnIniciar2ActionPerformed
 
 

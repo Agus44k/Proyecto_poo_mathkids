@@ -26,6 +26,7 @@ public class Menu_Estudiantes extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         btnIniciar2 = new javax.swing.JButton();
+        jbtnConfiguracion = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -54,6 +55,12 @@ public class Menu_Estudiantes extends javax.swing.JPanel {
         btnIniciar2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         btnIniciar2.addActionListener(this::btnIniciar2ActionPerformed);
         jPanel1.add(btnIniciar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 690, 120, 30));
+
+        jbtnConfiguracion.setFont(new java.awt.Font("Bodoni MT", 0, 36)); // NOI18N
+        jbtnConfiguracion.setForeground(new java.awt.Color(102, 153, 255));
+        jbtnConfiguracion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/configuracion.png"))); // NOI18N
+        jbtnConfiguracion.addActionListener(this::jbtnConfiguracionActionPerformed);
+        jPanel1.add(jbtnConfiguracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 30, 100, 80));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/que quieres hacer.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1370, -1));
@@ -119,6 +126,15 @@ public class Menu_Estudiantes extends javax.swing.JPanel {
             }
     }//GEN-LAST:event_btnIniciar2ActionPerformed
 
+    private void jbtnConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnConfiguracionActionPerformed
+
+        java.awt.Container parent = this.getParent();
+        if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {
+            java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();
+            layout.show(parent, "CardConfiguracion");
+        }
+    }//GEN-LAST:event_jbtnConfiguracionActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnIniciar2;
@@ -127,5 +143,6 @@ public class Menu_Estudiantes extends javax.swing.JPanel {
     private javax.swing.JButton jButton5;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jbtnConfiguracion;
     // End of variables declaration//GEN-END:variables
 }

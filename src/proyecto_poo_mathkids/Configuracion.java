@@ -81,7 +81,7 @@ public class Configuracion extends javax.swing.JPanel {
                 java.awt.Container parent = this.getParent();  
                 if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {       
                     java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();        
-                    layout.show(parent, "cardCreditos"); 
+                    layout.show(parent, "CardCredito"); 
                 }
     }//GEN-LAST:event_jButton5ActionPerformed
 

@@ -61,8 +61,8 @@ public class Inicio_sam extends javax.swing.JPanel {
         java.awt.Container parent = this.getParent();              
         if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {                           
         java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();                            
-        layout.show(parent, "CardConfiguracion"); 
-                }
+        layout.show(parent, "CardConfiguracion");    
+        }
     }//GEN-LAST:event_jbtnConfiguracionActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
