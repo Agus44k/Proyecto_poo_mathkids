@@ -40,13 +40,13 @@ public class Juegos extends javax.swing.JPanel {
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 280, 170, 170));
 
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/dividir.png"))); // NOI18N
+        jButton4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/division.png"))); // NOI18N
         jButton4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
         jButton4.addActionListener(this::jButton4ActionPerformed);
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 480, 170, 170));
 
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/multiplicar.png"))); // NOI18N
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/multiplicacion.png"))); // NOI18N
         jButton3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
         jButton3.addActionListener(this::jButton3ActionPerformed);
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 480, 170, 170));

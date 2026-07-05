@@ -30,6 +30,7 @@ public class Configuracion extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        btnIniciar2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -52,6 +53,14 @@ public class Configuracion extends javax.swing.JPanel {
         jButton7.addActionListener(this::jButton7ActionPerformed);
         jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 320, 200, 210));
 
+        btnIniciar2.setBackground(new java.awt.Color(107, 181, 255));
+        btnIniciar2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        btnIniciar2.setForeground(new java.awt.Color(255, 255, 255));
+        btnIniciar2.setText("VOLVER");
+        btnIniciar2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        btnIniciar2.addActionListener(this::btnIniciar2ActionPerformed);
+        jPanel1.add(btnIniciar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 630, 120, 30));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/configuración.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1400, 720));
 
@@ -68,7 +77,12 @@ public class Configuracion extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        // TODO add your handling code here:
+
+                java.awt.Container parent = this.getParent();  
+                if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {       
+                    java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();        
+                    layout.show(parent, "cardCreditos"); 
+                }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
@@ -76,11 +90,21 @@ public class Configuracion extends javax.swing.JPanel {
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        // TODO add your handling code here:
+        proyecto_poo_mathkids.MusicaFondo.toggle();
     }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void btnIniciar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar2ActionPerformed
+
+        java.awt.Container parent = this.getParent();
+        if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {
+            java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();
+            layout.show(parent, "cardLogin");
+        }
+    }//GEN-LAST:event_btnIniciar2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIniciar2;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;

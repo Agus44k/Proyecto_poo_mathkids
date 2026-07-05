@@ -113,6 +113,7 @@ public class RegistroSam extends javax.swing.JPanel {
             pstmt.setString(1, usuario);
             pstmt.setString(2, nombre);
             pstmt.setString(3, contra);
+            pstmt.setString(4, "ESTUDIANTE");
 
             pstmt.executeUpdate(); // Guarda en la base de datos
 

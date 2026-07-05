@@ -30,9 +30,7 @@ public class RespuestaIncorrecta extends javax.swing.JPanel {
         btnIniciar2 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -44,7 +42,7 @@ public class RespuestaIncorrecta extends javax.swing.JPanel {
         btnIniciar2.setText("VOLVER");
         btnIniciar2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
         btnIniciar2.addActionListener(this::btnIniciar2ActionPerformed);
-        jPanel1.add(btnIniciar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 660, 120, 30));
+        jPanel1.add(btnIniciar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 670, 120, 30));
 
         jButton1.setText("jButton1");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1270, 23, 80, 60));
@@ -52,16 +50,10 @@ public class RespuestaIncorrecta extends javax.swing.JPanel {
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/configuracion.png"))); // NOI18N
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1260, 10, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/volver.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 650, 160, 50));
-
         jButton2.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(102, 153, 255));
         jButton2.setText("INTÉNTALO");
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 600, 170, 50));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/intentalo.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 590, -1, -1));
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 120, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/incorrecto.png"))); // NOI18N
@@ -89,10 +81,8 @@ public class RespuestaIncorrecta extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

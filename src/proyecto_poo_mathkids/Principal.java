@@ -18,6 +18,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
     public PRINCIPAL() {
         initComponents();
         ConexionBD.conectar();
+        MusicaFondo.iniciar();
     }
 
 
@@ -32,6 +33,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
         juegos = new proyecto_poo_mathkids.Juegos();
         complejidad1 = new proyecto_poo_mathkids.Complejidad();
         soluciones1 = new proyecto_poo_mathkids.soluciones();
+        configuracion1 = new proyecto_poo_mathkids.Configuracion();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
@@ -42,6 +44,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
         getContentPane().add(juegos, "cardJuegos");
         getContentPane().add(complejidad1, "cardDificultad");
         getContentPane().add(soluciones1, "cardJuego");
+        getContentPane().add(configuracion1, "CardConfiguracion");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -71,6 +74,7 @@ public class PRINCIPAL extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private proyecto_poo_mathkids.Complejidad complejidad1;
+    private proyecto_poo_mathkids.Configuracion configuracion1;
     private proyecto_poo_mathkids.Inicio_sam inicio_sam;
     private proyecto_poo_mathkids.Juegos juegos;
     private proyecto_poo_mathkids.Login_sam login_sam;

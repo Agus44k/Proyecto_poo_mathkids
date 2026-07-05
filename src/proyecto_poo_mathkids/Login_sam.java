@@ -39,7 +39,7 @@ public class Login_sam extends javax.swing.JPanel {
         jButton3.setForeground(new java.awt.Color(102, 153, 255));
         jButton3.setText("VOLVER");
         jButton3.addActionListener(this::jButton3ActionPerformed);
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 650, 120, 40));
 
         jButton2.setFont(new java.awt.Font("Bodoni MT", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(102, 153, 255));
