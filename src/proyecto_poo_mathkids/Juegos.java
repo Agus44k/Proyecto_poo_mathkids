@@ -29,6 +29,7 @@ public class Juegos extends javax.swing.JPanel {
         jButton4 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        btnIniciar2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -56,6 +57,14 @@ public class Juegos extends javax.swing.JPanel {
         jButton2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 226, 245), 3, true));
         jButton2.addActionListener(this::jButton2ActionPerformed);
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 280, 170, 170));
+
+        btnIniciar2.setBackground(new java.awt.Color(107, 181, 255));
+        btnIniciar2.setFont(new java.awt.Font("Arial Rounded MT Bold", 0, 24)); // NOI18N
+        btnIniciar2.setForeground(new java.awt.Color(255, 255, 255));
+        btnIniciar2.setText("VOLVER");
+        btnIniciar2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white, java.awt.Color.white));
+        btnIniciar2.addActionListener(this::btnIniciar2ActionPerformed);
+        jPanel1.add(btnIniciar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 690, 120, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/seleccionar.png"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, -1));
@@ -120,8 +129,18 @@ public class Juegos extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void btnIniciar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciar2ActionPerformed
+
+        java.awt.Container parent = this.getParent();
+        if (parent != null && parent.getLayout() instanceof java.awt.CardLayout) {
+            java.awt.CardLayout layout = (java.awt.CardLayout) parent.getLayout();
+            layout.show(parent, "cardMenuestudiante");
+        }
+    }//GEN-LAST:event_btnIniciar2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnIniciar2;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;

@@ -120,6 +120,14 @@ public class soluciones extends javax.swing.JPanel {
         try {   
             int respuestaUsuario = Integer.parseInt(jtxtRespuesta.getText());   
             if (respuestaUsuario == gestor.respuestaCorrecta) {
+                try {
+                    javax.sound.sampled.AudioInputStream audio = javax.sound.sampled.AudioSystem.getAudioInputStream(
+                        getClass().getResourceAsStream("/Sonido/point.wav")
+                    );
+                    javax.sound.sampled.Clip clip = javax.sound.sampled.AudioSystem.getClip();
+                    clip.open(audio);
+                    clip.start();
+                } catch (Exception ex) {}
                 gestor.aciertos++;
                 jlblMensaje.setText("¡Excelente! Muy bien hecho.");       
             } else {        
