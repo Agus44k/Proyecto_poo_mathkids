@@ -9,7 +9,7 @@ public class MusicaFondo {
     public static void iniciar() {
         try {
             AudioInputStream audio = AudioSystem.getAudioInputStream(
-                MusicaFondo.class.getResourceAsStream("/Sonido/neutro.wav")
+                MusicaFondo.class.getResource("/Sonido/neutro.wav")
             );
             clip = AudioSystem.getClip();
             clip.open(audio);

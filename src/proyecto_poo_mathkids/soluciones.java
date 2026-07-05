@@ -4,17 +4,24 @@
  */
 package proyecto_poo_mathkids;
 
+import java.util.ArrayList;
 
 public class soluciones extends javax.swing.JPanel {
+
+    private ArrayList<Pregunta> historial = new ArrayList<>();
+    private Pregunta preguntaActual;
 
     public soluciones() {
         initComponents();
     }
     
         public void cargarNuevaPregunta() { 
-            
-            String nuevaOperacion = generador.generarNuevaOperacion();    
-            jlblPregunta.setText(nuevaOperacion);   
+            if (gestor.preguntaActual == 1) {
+                historial.clear();
+            }
+            preguntaActual = generador.generarNuevaOperacion();
+            historial.add(preguntaActual);
+            jlblPregunta.setText(preguntaActual.getOperacion());   
             jtxtRespuesta.setText(""); 
             jlblMensaje.setText("");
         }
@@ -119,10 +126,10 @@ public class soluciones extends javax.swing.JPanel {
 
         try {   
             int respuestaUsuario = Integer.parseInt(jtxtRespuesta.getText());   
-            if (respuestaUsuario == gestor.respuestaCorrecta) {
+            if (respuestaUsuario == preguntaActual.getRespuestaCorrecta()) {
                 try {
                     javax.sound.sampled.AudioInputStream audio = javax.sound.sampled.AudioSystem.getAudioInputStream(
-                        getClass().getResourceAsStream("/Sonido/point.wav")
+                        getClass().getResource("/Sonido/point.wav")
                     );
                     javax.sound.sampled.Clip clip = javax.sound.sampled.AudioSystem.getClip();
                     clip.open(audio);
@@ -137,8 +144,15 @@ public class soluciones extends javax.swing.JPanel {
             gestor.preguntaActual++;
             
             if (gestor.preguntaActual > gestor.MAX_PREGUNTAS) {
-                javax.swing.JOptionPane.showMessageDialog(this, 
-                    "Juego terminado\nAciertos: " + gestor.aciertos + "/" + gestor.MAX_PREGUNTAS);
+                StringBuilder resumen = new StringBuilder();
+                resumen.append("=== JUEGO TERMINADO ===\n\n");
+                resumen.append("Aciertos: ").append(gestor.aciertos).append("/").append(gestor.MAX_PREGUNTAS).append("\n\n");
+                resumen.append("Historial de preguntas:\n");
+                for (int i = 0; i < historial.size(); i++) {
+                    Pregunta p = historial.get(i);
+                    resumen.append(i + 1).append(". ").append(p.getOperacion()).append(" ").append(p.getRespuestaCorrecta()).append("\n");
+                }
+                javax.swing.JOptionPane.showMessageDialog(this, resumen.toString());
                 gestor.preguntaActual = 1;
                 gestor.aciertos = 0;
                 java.awt.Container parent = this.getParent();

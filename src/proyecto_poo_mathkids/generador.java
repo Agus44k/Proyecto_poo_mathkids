@@ -7,11 +7,11 @@ import java.util.Random;
 
 public class generador {
     
-    public static String generarNuevaOperacion() {
+    public static Pregunta generarNuevaOperacion() {
         Random rand = new Random();
         int num1 = 0;
         int num2 = 0;
-        
+        int respuesta = 0;
 
         switch (gestor.dificultadActual) {
             case 1:
@@ -33,7 +33,7 @@ public class generador {
         switch (gestor.operacionActual) {
             case "suma":
                 signo = " + ";
-                gestor.respuestaCorrecta = num1 + num2;
+                respuesta = num1 + num2;
                 break;
                 
             case "resta":
@@ -44,7 +44,7 @@ public class generador {
                     num1 = num2;
                     num2 = temporal;
                 }
-                gestor.respuestaCorrecta = num1 - num2;
+                respuesta = num1 - num2;
                 break;
                 
             case "multiplicacion":
@@ -54,7 +54,7 @@ public class generador {
                     num1 = rand.nextInt(6); // 0 a 5
                     num2 = rand.nextInt(6);
                 }
-                gestor.respuestaCorrecta = num1 * num2;
+                respuesta = num1 * num2;
                 break;
                 
             case "division":
@@ -70,7 +70,7 @@ public class generador {
                     int resultadoExacto = rand.nextInt(11) + 1; 
                     num1 = num2 * resultadoExacto;
                 }
-                gestor.respuestaCorrecta = num1 / num2;
+                respuesta = num1 / num2;
                 break;
                 
             case "reto":  
@@ -81,23 +81,22 @@ public class generador {
                     a = rand.nextInt(5) + 2;         
                     b = rand.nextInt(5) + 2;        
                     c = rand.nextInt(10) + 1; 
-                
-                    gestor.respuestaCorrecta = (a * b) + c;
-                    return a + " × " + b + " + " + c + " =";         
+                    respuesta = (a * b) + c;
+                    return new Pregunta(a + " × " + b + " + " + c + " =", respuesta);         
                 } else if (tipoReto == 1) {         
                     a = rand.nextInt(5) + 2;     
                     b = rand.nextInt(5) + 2;      
                     c = rand.nextInt(a * b) + 1;                
-                    gestor.respuestaCorrecta = (a * b) - c;        
-                    return a + " × " + b + " - " + c + " =";           
+                    respuesta = (a * b) - c;        
+                    return new Pregunta(a + " × " + b + " - " + c + " =", respuesta);           
                 } else {       
                     a = rand.nextInt(15) + 10;         
                     b = rand.nextInt(10) + 5;         
                     c = rand.nextInt(a + b) + 1;              
-                    gestor.respuestaCorrecta = (a + b) - c;       
-                    return a + " + " + b + " - " + c + " =";    
+                    respuesta = (a + b) - c;       
+                    return new Pregunta(a + " + " + b + " - " + c + " =", respuesta);    
                 }      
         }               
-        return num1 + signo + num2 + " =";
+        return new Pregunta(num1 + signo + num2 + " =", respuesta);
     }
 }

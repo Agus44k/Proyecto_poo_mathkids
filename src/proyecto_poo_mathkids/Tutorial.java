@@ -20,7 +20,6 @@ public class Tutorial extends javax.swing.JPanel {
     
 
 
-
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -45,7 +44,7 @@ public class Tutorial extends javax.swing.JPanel {
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 300, -1, -1));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/profesora_tutorial_v2-removebg-preview.png"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 300, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 330, 300, -1));
 
         fondo_tutorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/tutoria.png"))); // NOI18N
         jPanel2.add(fondo_tutorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
